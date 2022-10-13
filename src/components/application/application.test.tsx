@@ -30,6 +30,11 @@ describe("Application", () => {
     const imageElement = screen.getByAltText("a person with a laptop");
     expect(imageElement).toBeInTheDocument();
 
+    // getByTestId returns the elemenet that has the matching data-testid
+    // attribute.
+    const customElement = screen.getByTestId("custom-element");
+    expect(customElement).toBeInTheDocument();
+
     // getByRole querys elements for the given role
     const nameElement = screen.getByRole("textbox", {
       name: "Name",
