@@ -20,6 +20,12 @@ describe("Application", () => {
     const paragraphElement = screen.getByText("All fields are mandatory");
     expect(paragraphElement).toBeInTheDocument();
 
+    // getByAltText returns the element that has the given alt text. Only supports
+    // elements that accepts an alt attribute such as img, input, area, custom html
+    // elements.
+    const imageElement = screen.getByAltText("a person with a laptop");
+    expect(imageElement).toBeInTheDocument();
+
     // getByRole querys elements for the given role
     const nameElement = screen.getByRole("textbox", {
       name: "Name",
