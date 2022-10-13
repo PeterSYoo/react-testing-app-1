@@ -20,6 +20,10 @@ describe("Application", () => {
     const paragraphElement = screen.getByText("All fields are mandatory");
     expect(paragraphElement).toBeInTheDocument();
 
+    // getByTitle returns the element that has the matching title attribute.
+    const closeElement = screen.getByTitle("close");
+    expect(closeElement).toBeInTheDocument();
+
     // getByAltText returns the element that has the given alt text. Only supports
     // elements that accepts an alt attribute such as img, input, area, custom html
     // elements.
