@@ -28,6 +28,11 @@ describe("Application", () => {
     });
     expect(nameElement2).toBeInTheDocument();
 
+    // getByPlaceHolderText looks for all placeholder attribute and find 1 that
+    // matches the given text.
+    const nameElement3 = screen.getByPlaceholderText("Fullname");
+    expect(nameElement3).toBeInTheDocument();
+
     const bioElement = screen.getByRole("textbox", {
       name: "Bio",
     });
