@@ -15,6 +15,11 @@ describe("Application", () => {
     });
     expect(sectionHeading).toBeInTheDocument();
 
+    // getByText will search for all elements with text node matching the text
+    // content of the given text. Good for finding paragraph, span, div tags.
+    const paragraphElement = screen.getByText("All fields are mandatory");
+    expect(paragraphElement).toBeInTheDocument();
+
     // getByRole querys elements for the given role
     const nameElement = screen.getByRole("textbox", {
       name: "Name",
