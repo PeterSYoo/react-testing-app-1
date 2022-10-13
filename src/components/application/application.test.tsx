@@ -38,6 +38,12 @@ describe("Application", () => {
     const nameElement3 = screen.getByPlaceholderText("Fullname");
     expect(nameElement3).toBeInTheDocument();
 
+    // getByDisplayValue returns the input text area or select element that has
+    // the matching display value. Typically used when we want to query form
+    // controls based on their values.
+    const nameElement4 = screen.getByDisplayValue("Peter");
+    expect(nameElement4).toBeInTheDocument();
+
     const bioElement = screen.getByRole("textbox", {
       name: "Bio",
     });
