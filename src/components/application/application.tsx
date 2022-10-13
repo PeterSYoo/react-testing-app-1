@@ -6,7 +6,7 @@ export const Application = () => {
       <form>
         <div>
           <label htmlFor="name">Name</label>
-          <input type="text" id="name" />
+          <input type="text" id="name" placeholder="Fullname" />
         </div>
         {/* multiple text roles, use the text inside label tag instead */}
         <div>
